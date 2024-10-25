@@ -1,0 +1,25 @@
+package Ejer2;
+
+public class Main {
+    public static void main(String[] args) {
+        // Crear un libro
+        Libro libro1 = new Libro(1, "Don Quijote", 1605);
+        System.out.println("Libro creado: " + libro1.toString());
+        
+        // Prestar el libro
+        libro1.prestar();
+        System.out.println("Después de prestar: " + libro1.toString());
+        
+        // Devolver el libro
+        libro1.devolver();
+        System.out.println("Después de devolver: " + libro1.toString());
+        
+        // Crear una revista
+        Revista revista1 = new Revista(2, "National Geographic", 2023, 156);
+        System.out.println("\nRevista creada: " + revista1.toString());
+        
+        // Mostrar año de publicación y código
+        System.out.println("Año de publicación de la revista: " + revista1.getAnioPublicacion());
+        System.out.println("Código de la revista: " + revista1.getCodigo());
+    }
+}

@@ -1,0 +1,7 @@
+package Ejer1;
+
+public interface iVehiculo
+{
+    void Conducir();
+    Boolean Retanquear(int cantidad);
+}

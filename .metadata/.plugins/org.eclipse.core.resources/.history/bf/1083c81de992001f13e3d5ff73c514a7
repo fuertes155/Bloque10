@@ -1,0 +1,33 @@
+package Ejer1;
+
+
+
+    public class Motocicleta : IVehiculo
+    {
+        private int gasolina;
+
+        public Motocicleta(int gasolinaInicial)
+        {
+            this.gasolina = gasolinaInicial;
+        }
+
+        public void Conducir()
+        {
+            if (gasolina > 0)
+            {
+                Console.WriteLine("La motocicleta está Conduciendo");
+                gasolina--;
+            }
+            else
+            {
+                Console.WriteLine("La motocicleta no tiene gasolina suficiente para conducir");
+            }
+        }
+
+        public Boolean Retanquear(int cantidad)
+        {
+            gasolina += cantidad;
+            return true;
+        }
+    }
+}

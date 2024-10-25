@@ -1,0 +1,30 @@
+package Ejer1;
+
+public class Auto : IVehiculo
+{
+    private int gasolina;
+
+    public Auto(int gasolinaInicial)
+    {
+        this.gasolina = gasolinaInicial;
+    }
+
+    public void Conducir()
+    {
+        if (gasolina > 0)
+        {
+            Console.WriteLine("El auto está Conduciendo");
+            gasolina--;
+        }
+        else
+        {
+            Console.WriteLine("El auto no tiene gasolina suficiente para conducir");
+        }
+    }
+
+    public bool Retanquear(int cantidad)
+    {
+        gasolina += cantidad;
+        return true;
+    }
+}
